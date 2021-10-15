@@ -35,49 +35,49 @@ env HOME
 - Understanding the shell variable.
 ​
 ```bash
-CLARUS=way
+MEGA=deth
 env
 set
-set | grep CLARUS
-echo $CLARUS
+set | grep MEGA
+echo $MEGA
 ```
 ​
 - Understanding the environment variable. Use export command.
 ​
 ```bash
-export WAY=clarus
+export DETH=mega
 env
 ```
 ​
 - Difference between shell and environment variables. Create a user, name it "user1", switch to user1, check the environment and shell variables.
 ​
 ```bash
-export WAY=clarus
+export DETH=mega
 sudo su
 useradd user1
 passwd user1 # give user1 any password.
 exit
 su user1
-env | grep WAY
-set | grep CLARUS
+env | grep DETH
+set | grep MEGA
 ```
 ​
 - Change the environment variable value.
 ​
 ```bash
-export WAY=linux
+export DETH=linux
 env
-export WAY=script
+export DETH=script
 env
 ```
 ​
 - Remove the environment variable with unset command.
 ​
 ```bash
-export WAY=clarusway
-env | grep WAY
-unset WAY
-env | grep WAY
+export DETH=mega
+env | grep DETH
+unset DETH
+env | grep DETH
 ```
 ​
 ## Part 2 - Path Variable
@@ -117,11 +117,11 @@ test.sh
 ​
 ```bash
 cd test
-export CLARUS=env.var
-WAY=shell.var
+export MEGA=env.var
+DETH=shell.var
 cd test
 nano test1.sh
-# copy and paste the code-echo "normally we should see env. variable $CLARUS but probably we can't see the shell variable $WAY "
+# copy and paste the code-echo "normally we should see env. variable $MEGA but probably we can't see the shell variable $DETH "
 chmod +x test1.sh
 ./test1.sh
 ```
